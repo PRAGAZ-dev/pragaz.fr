@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAGAZ - Expertise cryogénique</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#0B72B9',secondary:'#E0F2FF'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(255, 255, 255, 0.5) 70%, rgba(255, 255, 255, 0.1) 100%), url('https://public.readdy.ai/ai/img_res/9204f3c4a9e8fb65509590d869cd2b06.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        input:focus {
+            outline: none;
+        }
+        .custom-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #0B72B9;
+            border-radius: 4px;
+            outline: none;
+            cursor: pointer;
+            position: relative;
+        }
+        .custom-checkbox:checked {
+            background-color: #0B72B9;
+        }
+        .custom-checkbox:checked::after {
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            top: 2px;
+            left: 6px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary">PRAGAZ</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium text-primary border-b-2 border-primary">Accueil</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary transition-colors">À propos</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary transition-colors">Solutions</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary transition-colors">Formation</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary transition-colors">Actualités</a>
+                <a href="#" class="font-medium text-gray-700 hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center bg-gray-100 rounded-full px-3 py-1.5">
+                    <div class="w-5 h-5 flex items-center justify-center text-gray-500">
+                        <i class="ri-search-line"></i>
+                    </div>
+                    <input type="text" placeholder="Rechercher..." class="bg-transparent border-none text-sm pl-2 w-36 focus:w-44 transition-all">
+                </div>
+                <button class="!rounded-button bg-primary text-white px-4 py-2 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap hidden md:block">Demander un devis</button>
+                <div class="md:hidden w-10 h-10 flex items-center justify-center cursor-pointer">
+                    <i class="ri-menu-line text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[600px] flex items-center">
+        <div class="container mx-auto px-4 py-20 w-full">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">L'expertise cryogénique au service de votre sécurité</h1>
+                <p class="text-lg md:text-xl text-gray-700 mb-8">Solutions d'azote liquide, services clés en main et formations spécialisées pour les professionnels exigeants.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="!rounded-button bg-primary text-white px-6 py-3 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Demander un devis</button>
+                    <button class="!rounded-button bg-white border border-primary text-primary px-6 py-3 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Découvrir nos solutions</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos services spécialisés</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Découvrez notre gamme complète de solutions cryogéniques adaptées à vos besoins professionnels.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-flask-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Azote Liquide</h3>
+                    <p class="text-gray-600 mb-4">Fourniture d'azote liquide de haute pureté dans différents volumes adaptés à vos besoins spécifiques.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        En savoir plus
+                        <i class="ri-arrow-right-line ml-1"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-tools-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Installation & Maintenance</h3>
+                    <p class="text-gray-600 mb-4">Services clés en main comprenant l'installation, la maintenance préventive et les audits de sécurité.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        En savoir plus
+                        <i class="ri-arrow-right-line ml-1"></i>
+                    </a>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-graduation-cap-line text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Formation</h3>
+                    <p class="text-gray-600 mb-4">Programmes de formation spécialisés sur la sécurité cryogénique et les bonnes pratiques de manipulation.</p>
+                    <a href="#" class="text-primary font-medium flex items-center">
+                        En savoir plus
+                        <i class="ri-arrow-right-line ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/22e0d91d24021ab3883e4c16eecf6283.jpg" alt="L'équipe PRAGAZ" class="rounded-lg shadow-lg object-cover object-top w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">À propos de PRAGAZ</h2>
+                    <p class="text-gray-600 mb-4">Depuis plus de 20 ans, PRAGAZ s'est imposé comme le leader de la cryogénie en France. Notre entreprise familiale a bâti sa réputation sur trois valeurs fondamentales : sécurité, innovation et réactivité.</p>
+                    <p class="text-gray-600 mb-6">Notre équipe d'experts qualifiés vous accompagne dans tous vos projets liés à l'azote liquide, de la fourniture à la formation, en passant par l'installation et la maintenance de vos équipements.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
+                                <i class="ri-shield-check-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Sécurité</h4>
+                                <p class="text-sm text-gray-500">Normes strictes & protocoles rigoureux</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
+                                <i class="ri-lightbulb-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Innovation</h4>
+                                <p class="text-sm text-gray-500">R&D continue & solutions avancées</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
+                                <i class="ri-time-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Réactivité</h4>
+                                <p class="text-sm text-gray-500">Service client 24/7 & intervention rapide</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-3">
+                                <i class="ri-user-star-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Expertise</h4>
+                                <p class="text-sm text-gray-500">20+ ans d'expérience & certifications</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="!rounded-button bg-primary text-white px-6 py-3 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">En savoir plus sur nous</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Nos produits</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Une gamme complète de produits et d'équipements cryogéniques pour répondre à tous vos besoins professionnels.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/9e6d9f16658504248cedb8cfc58cb43d.jpg" alt="Azote Liquide" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Azote Liquide</h3>
+                        <p class="text-sm text-gray-600 mb-3">Disponible en différentes puretés et volumes selon vos besoins spécifiques.</p>
+                        <a href="#" class="text-primary font-medium text-sm flex items-center">
+                            Voir les options
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/1b267dade720cc0d2d72e9604d389bf2.jpg" alt="Cuves de stockage" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Cuves de stockage</h3>
+                        <p class="text-sm text-gray-600 mb-3">Cuves cryogéniques de différentes capacités pour un stockage sécurisé.</p>
+                        <a href="#" class="text-primary font-medium text-sm flex items-center">
+                            Voir les options
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/4eda452a2b88d84c727f5de6a4aef4a3.jpg" alt="Détecteurs d'oxygène" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Détecteurs d'oxygène</h3>
+                        <p class="text-sm text-gray-600 mb-3">Systèmes de surveillance pour prévenir les risques d'anoxie.</p>
+                        <a href="#" class="text-primary font-medium text-sm flex items-center">
+                            Voir les options
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/174ed9e3746701112f61afd9c73d600c.jpg" alt="Équipements de protection" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold mb-2">Équipements de protection</h3>
+                        <p class="text-sm text-gray-600 mb-3">Gants, tabliers et visières spécialement conçus pour la cryogénie.</p>
+                        <a href="#" class="text-primary font-medium text-sm flex items-center">
+                            Voir les options
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="!rounded-button bg-white border border-primary text-primary px-6 py-3 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Voir tous nos produits</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ce que disent nos clients</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Découvrez les témoignages de nos clients satisfaits qui nous font confiance depuis des années.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"PRAGAZ nous accompagne depuis plus de 5 ans pour la fourniture d'azote liquide et la maintenance de nos équipements. Leur réactivité et leur expertise sont exceptionnelles."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Dr. Sophie Moreau</h4>
+                            <p class="text-sm text-gray-500">Directrice de laboratoire, Institut Pasteur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"La formation dispensée par PRAGAZ a permis à nos équipes de manipuler l'azote liquide en toute sécurité. Leur programme est complet et parfaitement adapté à nos besoins."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Jean-Philippe Durand</h4>
+                            <p class="text-sm text-gray-500">Responsable sécurité, CHU de Bordeaux</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-primary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"L'installation de notre nouvelle cuve d'azote liquide a été réalisée avec professionnalisme et dans les délais. Le service après-vente est impeccable et très réactif."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                            <i class="ri-user-line text-gray-500"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Isabelle Laurent</h4>
+                            <p class="text-sm text-gray-500">Directrice technique, Laboratoires BioTech</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-xl font-semibold text-center mb-8">Ils nous font confiance</h3>
+                <div class="flex flex-wrap justify-center gap-8 items-center">
+                    <div class="flex items-center text-gray-600">
+                        <i class="ri-hospital-line text-3xl mr-2"></i>
+                        <span class="font-medium">CHU de Paris</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="ri-microscope-line text-3xl mr-2"></i>
+                        <span class="font-medium">Institut Pasteur</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="ri-building-4-line text-3xl mr-2"></i>
+                        <span class="font-medium">Sanofi</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="ri-flask-line text-3xl mr-2"></i>
+                        <span class="font-medium">Laboratoires BioTech</span>
+                    </div>
+                    <div class="flex items-center text-gray-600">
+                        <i class="ri-building-line text-3xl mr-2"></i>
+                        <span class="font-medium">Air Liquide</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Prêt à optimiser votre installation cryogénique ?</h2>
+                <p class="text-lg text-gray-600 mb-8">Contactez-nous dès aujourd'hui pour bénéficier d'un audit gratuit de vos installations et découvrir comment PRAGAZ peut répondre à vos besoins spécifiques.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="!rounded-button bg-primary text-white px-6 py-3 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Demander un audit gratuit</button>
+                    <button class="!rounded-button bg-white border border-primary text-primary px-6 py-3 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Nous contacter</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Actualités & Blog</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Restez informé des dernières actualités et innovations dans le domaine de la cryogénie.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/3845fc83dd094e92f877b6b42921c71b.jpg" alt="Nouvelles normes de sécurité" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-5">
+                        <div class="text-sm text-gray-500 mb-2">10 avril 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">Nouvelles normes de sécurité pour les installations cryogéniques</h3>
+                        <p class="text-gray-600 text-sm mb-4">Découvrez les dernières réglementations européennes concernant la sécurité des installations cryogéniques et comment s'y conformer.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Lire l'article
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/f7cabee05ee5f0093c4cdfbad83fdf2e.jpg" alt="Formation cryogénie" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-5">
+                        <div class="text-sm text-gray-500 mb-2">2 avril 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">Calendrier des formations cryogéniques 2025</h3>
+                        <p class="text-gray-600 text-sm mb-4">Consultez notre nouveau calendrier de formations pour l'année 2025 et inscrivez-vous dès maintenant pour garantir votre place.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Lire l'article
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://public.readdy.ai/ai/img_res/1486b2898a52b23e8b153c815cf35f51.jpg" alt="Salon CryoTech" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="p-5">
+                        <div class="text-sm text-gray-500 mb-2">25 mars 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">PRAGAZ au salon CryoTech 2025 à Lyon</h3>
+                        <p class="text-gray-600 text-sm mb-4">Retrouvez-nous au salon CryoTech 2025 à Lyon du 15 au 17 mai pour découvrir nos dernières innovations et échanger avec nos experts.</p>
+                        <a href="#" class="text-primary font-medium flex items-center">
+                            Lire l'article
+                            <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="!rounded-button bg-white border border-primary text-primary px-6 py-3 font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">Voir tous les articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Questions fréquentes</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Retrouvez les réponses aux questions les plus fréquemment posées sur nos produits et services.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-4">
+                    <button class="w-full flex justify-between items-center bg-white p-4 rounded shadow-sm text-left font-medium" onclick="toggleFaq(this)">
+                        <span>Comment commander de l'azote liquide ?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="hidden bg-white p-4 rounded-b shadow-sm">
+                        <p class="text-gray-600">Pour commander de l'azote liquide, vous pouvez nous contacter par téléphone au 01 23 45 67 89 ou remplir le formulaire de commande sur notre site web. Nous proposons différents volumes et puretés selon vos besoins spécifiques. Un conseiller vous contactera pour confirmer votre commande et organiser la livraison.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button class="w-full flex justify-between items-center bg-white p-4 rounded shadow-sm text-left font-medium" onclick="toggleFaq(this)">
+                        <span>Quels sont les délais de livraison ?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="hidden bg-white p-4 rounded-b shadow-sm">
+                        <p class="text-gray-600">Nos délais de livraison standard sont de 24 à 48 heures pour la France métropolitaine. Pour les commandes urgentes, nous proposons un service de livraison express sous 12 heures (selon votre localisation). Pour les clients ayant souscrit à un contrat d'approvisionnement régulier, nous garantissons des livraisons à dates fixes.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button class="w-full flex justify-between items-center bg-white p-4 rounded shadow-sm text-left font-medium" onclick="toggleFaq(this)">
+                        <span>Comment entretenir une cuve d'azote liquide ?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="hidden bg-white p-4 rounded-b shadow-sm">
+                        <p class="text-gray-600">L'entretien d'une cuve d'azote liquide nécessite des vérifications régulières : contrôle du niveau d'azote, inspection visuelle de l'état général, vérification des joints et des systèmes de sécurité. Nous recommandons une maintenance préventive annuelle par nos techniciens spécialisés pour garantir la sécurité et la longévité de votre équipement.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button class="w-full flex justify-between items-center bg-white p-4 rounded shadow-sm text-left font-medium" onclick="toggleFaq(this)">
+                        <span>Quelle formation est nécessaire pour manipuler l'azote liquide ?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="hidden bg-white p-4 rounded-b shadow-sm">
+                        <p class="text-gray-600">La manipulation de l'azote liquide nécessite une formation spécifique aux risques cryogéniques. PRAGAZ propose des formations adaptées à différents niveaux : initiation pour les nouveaux utilisateurs, perfectionnement pour les utilisateurs réguliers, et formation de formateurs pour les responsables sécurité. Ces formations sont conformes aux exigences réglementaires et peuvent être dispensées dans vos locaux.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-4">
+                    <button class="w-full flex justify-between items-center bg-white p-4 rounded shadow-sm text-left font-medium" onclick="toggleFaq(this)">
+                        <span>Quels équipements de protection sont nécessaires ?</span>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </button>
+                    <div class="hidden bg-white p-4 rounded-b shadow-sm">
+                        <p class="text-gray-600">Pour manipuler l'azote liquide en toute sécurité, il est indispensable de porter des équipements de protection individuelle spécifiques : gants cryogéniques, visière de protection faciale, tablier cryogénique et chaussures fermées. PRAGAZ propose une gamme complète d'EPI adaptés à la cryogénie, conformes aux normes européennes en vigueur.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="text-primary font-medium flex items-center justify-center">
+                    Voir toutes les questions fréquentes
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contactez-nous</h2>
+                    <p class="text-gray-600 mb-8">Vous avez des questions ou besoin d'informations supplémentaires ? N'hésitez pas à nous contacter. Notre équipe est à votre disposition pour vous répondre dans les plus brefs délais.</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+                                <i class="ri-map-pin-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Adresse</h4>
+                                <p class="text-gray-600">123 Avenue de la Cryogénie, 75001 Paris, France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+                                <i class="ri-phone-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Téléphone</h4>
+                                <p class="text-gray-600">+33 (0)1 23 45 67 89</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+                                <i class="ri-mail-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Email</h4>
+                                <p class="text-gray-600">contact@pragaz.fr</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center text-primary mr-4">
+                                <i class="ri-time-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold mb-1">Horaires</h4>
+                                <p class="text-gray-600">Lundi - Vendredi : 8h30 - 18h00<br>Service d'urgence 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded shadow-md">
+                        <h3 class="text-xl font-semibold mb-6">Envoyez-nous un message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-0" placeholder="Votre nom">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-0" placeholder="Votre email">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Sujet</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-0" placeholder="Sujet de votre message">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary focus:ring-0" placeholder="Votre message"></textarea>
+                            </div>
+                            
+                            <div class="mb-6 flex items-start">
+                                <input type="checkbox" id="privacy" class="custom-checkbox mr-3">
+                                <label for="privacy" class="text-sm text-gray-600">J'accepte que mes données soient traitées conformément à la politique de confidentialité de PRAGAZ.</label>
+                            </div>
+                            
+                            <button type="submit" class="!rounded-button bg-primary text-white px-6 py-3 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap w-full">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-[400px] relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');"></div>
+        <div class="absolute top-4 left-4 bg-white p-4 rounded shadow-md max-w-xs">
+            <h3 class="font-semibold mb-2">PRAGAZ</h3>
+            <p class="text-sm text-gray-600">123 Avenue de la Cryogénie<br>75001 Paris, France</p>
+            <button class="!rounded-button mt-3 bg-primary text-white px-4 py-2 text-sm font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Itinéraire</button>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Restez informé</h2>
+                <p class="text-lg text-gray-600 mb-8">Inscrivez-vous à notre newsletter pour recevoir nos dernières actualités, conseils techniques et informations sur nos nouveaux produits.</p>
+                <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Votre adresse email" class="flex-1 px-4 py-3 border border-gray-300 rounded focus:border-primary focus:ring-0">
+                    <button class="!rounded-button bg-primary text-white px-6 py-3 font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">S'abonner</button>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">En vous inscrivant, vous acceptez de recevoir nos communications. Vous pourrez vous désinscrire à tout moment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 block">PRAGAZ</a>
+                    <p class="text-gray-400 mb-6">L'expertise cryogénique au service de votre sécurité depuis plus de 20 ans.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 text-white rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Liens rapides</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Solutions & Produits</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Formation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Actualités</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Fourniture d'azote liquide</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Installation & maintenance</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Audit de sécurité</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Formation cryogénique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Conseil technique</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Service après-vente</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <span class="text-gray-400">123 Avenue de la Cryogénie, 75001 Paris, France</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <span class="text-gray-400">+33 (0)1 23 45 67 89</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <span class="text-gray-400">contact@pragaz.fr</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <span class="text-gray-400">Lun - Ven : 8h30 - 18h00<br>Service d'urgence 24/7</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2025 PRAGAZ. Tous droits réservés.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Politique de confidentialité</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Conditions générales</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-white transition-colors">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.remove('ri-arrow-down-s-line');
+                icon.classList.add('ri-arrow-up-s-line');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('ri-arrow-up-s-line');
+                icon.classList.add('ri-arrow-down-s-line');
+            }
+        }
+    </script>
+</body>
+</html>
